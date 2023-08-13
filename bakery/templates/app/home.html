@@ -31,7 +31,7 @@
 {% block main-content %}
 <!-- 1st Product Slider -->
 <div class="m-3">
-  <h2>Bakerys Cakes</h2>
+  <h2>Bakery's Cakes</h2>
   <!-- Slider 1 -->
   {% if cakes|length > 1 %}
   <div class="owl-carousel" id="slider1">
@@ -59,14 +59,15 @@
 
 <!-- 2nd Product Slider -->
 <div class="mx-3">
-  <h2>Bakerys Cookies</h2>
+  <h2>Bakery's Cookies</h2>
   <!-- Slider 2 -->
+
   <div class="owl-carousel" id="slider2">
     {% for ck in cookies %}
     <a href="{% url 'product-detail'  ck.id %}" class="btn">
       <div class="item"><img src="{{ck.product_image.url}}" alt="" height="200px">
-        <div class="fw-bold">{{ck.title}}</div>
-        <div class="fs-5">Rs. {{ck.discounted_price}}</div>
+        <div class="fw-bold d-block py-2">{{ck.title}}</div>
+        <div class="h5">Rs. {{ck.discounted_price}}</div>
       </div>
     </a>
     {% endfor %}
